@@ -19,12 +19,12 @@ def join_link(client, message):
         if message.chat.id not in chat_id:
             chat_id.append(message.chat.id)
             id_index = chat_id.index(message.chat.id)
-            result[id_index] = int(number[1])
+            result[id_index] = float(eval(number[1]))
             print(result[id_index])
             message.reply_text(result[id_index])
         else:
             id_index = chat_id.index(message.chat.id)
-            result[id_index] += int(number[1])
+            result[id_index] += float(eval(number[1]))
             print(result[id_index])
             message.reply_text(result[id_index])
     if len(str(message.text).split("-")) ==2:
@@ -32,12 +32,12 @@ def join_link(client, message):
         if message.chat.id not in chat_id:
             chat_id.append(message.chat.id)
             id_index = chat_id.index(message.chat.id)
-            result[id_index] = int(number[1])
+            result[id_index] = float(eval(number[1]))
             print(result[id_index])
             message.reply_text(result[id_index])
         else:
             id_index = chat_id.index(message.chat.id)
-            result[id_index] -= int(number[1])
+            result[id_index] -= float(eval(number[1]))
             print(result[id_index])
             message.reply_text(result[id_index])
 
